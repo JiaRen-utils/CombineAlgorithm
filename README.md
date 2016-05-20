@@ -12,8 +12,8 @@ This is an algorithm to solve the combination of several numbers
     * @since megagao 2016-5-20 下午8:11:05
     */
     public static void main(String[] args) throws Exception{
-      Integer[] a = new Integer[]{1,2,3,4,5,6};
-      CombineAlgorithm ca = new CombineAlgorithm(a,3);
+        Integer[] a = new Integer[]{1,2,3,4,5,6};
+        CombineAlgorithm ca = new CombineAlgorithm(a,3);
   		
   		Object[][] c = ca.getResult();
   		for(int i = 0; i<c.length; i++){
