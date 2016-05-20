@@ -4,7 +4,7 @@ This is an algorithm to solve the combination of several numbers
 从给定的M个对象去取N个对象，得到 C(m,n)个数 = (m!)/(n!*(m-n)!) 的结果，并可现实所有结果。
 并得到结果的个数。
 
-# 用法实例
+
    /**
   	 * 用法实例
   	 * @param args
