@@ -1,49 +1,43 @@
 /**    
- * ÎÄ¼şÃû£ºCombineAlgorithm.java    
- *    
- * °æ±¾ĞÅÏ¢£º    
- * ÈÕÆÚ£º2014-6-12    
- * Copyright Corporation 2014     
- * °æÈ¨ËùÓĞ    
- *    
+ * æ–‡ä»¶åï¼šCombineAlgorithm.java    
  */
 
 
 import java.util.Arrays;
 
 /**
- * @Description:×éºÏËã·¨ ´ÓM¸öÊıÖĞÈ¡³öN¸öÊı£¬ÎŞË³Ğò
- * ¶şÎ¬ObjectÊı×é
- * @author :royoan
- * @since :2014-6-12 ÏÂÎç10:22:22
+ * @Description:ç»„åˆç®—æ³• ä»Mä¸ªæ•°ä¸­å–å‡ºNä¸ªæ•°ï¼Œæ— é¡ºåº
+ * äºŒç»´Objectæ•°ç»„
+ * @author :Mega Gao
+ * @since :2015-5-20 ä¸‹åˆ10:22:22
  * @version :0.0.1
  */
 public class CombineAlgorithm {
-    /* Ô­M¸öÊı¾İÊı×é */
+    /* åŸMä¸ªæ•°æ®æ•°ç»„ */
     private Object[] src;
 
-    /* srcÊı×éµÄ³¤¶È */
+    /* srcæ•°ç»„çš„é•¿åº¦ */
     private int m;
 
-    /* ĞèÒª»ñÈ¡N¸öÊı */
+    /* éœ€è¦è·å–Nä¸ªæ•° */
     private int n;
     
-    //ÁÙÊ±±äÁ¿£¬objµÄĞĞÊı
+    //ä¸´æ—¶å˜é‡ï¼Œobjçš„è¡Œæ•°
     private int objLineIndex;
     
-    /* ´æ·Å½á¹ûµÄ¶şÎ¬Êı×é */
+    /* å­˜æ”¾ç»“æœçš„äºŒç»´æ•°ç»„ */
     public Object[][] obj;
     
     public CombineAlgorithm(Object[] src, int getNum) throws Exception {
         if (src == null)
-            throw new Exception("Ô­Êı×éÎª¿Õ.");
+            throw new Exception("åŸæ•°ç»„ä¸ºç©º.");
         if (src.length < getNum)
-            throw new Exception("ÒªÈ¡µÄÊı¾İ±ÈÔ­Êı×é¸öÊı»¹ ´ó .");
+            throw new Exception("è¦å–çš„æ•°æ®æ¯”åŸæ•°ç»„ä¸ªæ•°è¿˜ å¤§ .");
         this.src = src;
         m = src.length;
         n = getNum;
         
-        /*  ³õÊ¼»¯  */
+        /*  åˆå§‹åŒ–  */
         objLineIndex = 0;
         obj = new Object[combination(m,n)][n];
         
@@ -53,22 +47,22 @@ public class CombineAlgorithm {
 
     /**
      * <p>
-     * ¼ÆËã C(m,n)¸öÊı = (m!)/(n!*(m-n)!)
+     * è®¡ç®— C(m,n)ä¸ªæ•° = (m!)/(n!*(m-n)!)
      * </p>
-     * ´ÓM¸öÊıÖĞÑ¡N¸öÊı£¬º¯Êı·µ»ØÓĞ¶àÉÙÖÖÑ¡·¨ ²ÎÊı m ±ØĞë´óÓÚµÈÓÚ n m = 0; n = 0; retuan 1;
+     * ä»Mä¸ªæ•°ä¸­é€‰Nä¸ªæ•°ï¼Œå‡½æ•°è¿”å›æœ‰å¤šå°‘ç§é€‰æ³• å‚æ•° m å¿…é¡»å¤§äºç­‰äº n m = 0; n = 0; retuan 1;
      * 
      * @param m
      * @param n
      * @return
-     * @since royoan 2014-6-13 ÏÂÎç8:25:33
+     * @since royoan 2014-6-13 ä¸‹åˆ8:25:33
      */
     public int combination(int m, int n) {
         if (m < n)
-            return 0; // Èç¹û×ÜÊıĞ¡ÓÚÈ¡³öµÄÊı£¬Ö±½Ó·µ»Ø0
+            return 0; // å¦‚æœæ€»æ•°å°äºå–å‡ºçš„æ•°ï¼Œç›´æ¥è¿”å›0
 
         int k = 1;
         int j = 1;
-        // ¸ÃÖÖËã·¨Ô¼µôÁË·ÖÄ¸µÄ(m-n)!,ÕâÑù·Ö×ÓÏà³ËµÄ¸öÊı¾ÍÊÇÓĞn¸öÁË
+        // è¯¥ç§ç®—æ³•çº¦æ‰äº†åˆ†æ¯çš„(m-n)!,è¿™æ ·åˆ†å­ç›¸ä¹˜çš„ä¸ªæ•°å°±æ˜¯æœ‰nä¸ªäº†
         for (int i = n; i >= 1; i--) {
             k = k * m;
             j = j * n;
@@ -79,13 +73,13 @@ public class CombineAlgorithm {
     }
     
     /**
-     * <p> µİ¹éËã·¨£¬°Ñ½á¹ûĞ´µ½obj¶şÎ¬Êı×é¶ÔÏó </p>      
+     * <p> é€’å½’ç®—æ³•ï¼ŒæŠŠç»“æœå†™åˆ°objäºŒç»´æ•°ç»„å¯¹è±¡ </p>      
      * @param src
      * @param srcIndex
      * @param i
      * @param n
      * @param tmp
-     * @since royoan 2014-6-15 ÉÏÎç11:22:24
+     * @since royoan 2014-6-15 ä¸Šåˆ11:22:24
      */
     private void combine(Object src[], int srcIndex, int i, int n, Object[] tmp) {
         int j;
@@ -112,10 +106,10 @@ public class CombineAlgorithm {
     }
     
     /**
-     * ÓÃ·¨ÊµÀı    
+     * ç”¨æ³•å®ä¾‹    
      * @param args
      * @throws Exception
-     * @since royoan 2014-6-15 ÏÂÎç8:21:05
+     * @since royoan 2014-6-15 ä¸‹åˆ8:21:05
      */
     public static void main(String[] args) throws Exception {
         Integer[] a = new Integer[]{1,2,3,4,5,6};
