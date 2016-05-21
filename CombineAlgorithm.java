@@ -101,7 +101,7 @@ public class CombineAlgorithm {
         
     }
 
-    public Object[][] getResutl() {
+    public Object[][] getResult() {
         return obj;
     }
     
@@ -115,7 +115,7 @@ public class CombineAlgorithm {
         Integer[] a = new Integer[]{1,2,3,4,5,6};
         CombineAlgorithm ca = new CombineAlgorithm(a, 3);
         
-        Object[][] c = ca.getResutl();
+        Object[][] c = ca.getResult();
         for (int i = 0; i < c.length; i++) {
             System.out.println(Arrays.toString(c[i]));
         }
