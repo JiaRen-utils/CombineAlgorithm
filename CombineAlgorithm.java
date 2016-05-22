@@ -32,7 +32,7 @@ public class CombineAlgorithm {
         if (src == null)
             throw new Exception("原数组为空.");
         if (src.length < getNum)
-            throw new Exception("要取的数据比原数组个数还 大 .");
+            throw new Exception("要取的数据比原数组个数还大 .");
         this.src = src;
         m = src.length;
         n = getNum;
