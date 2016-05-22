@@ -54,7 +54,6 @@ public class CombineAlgorithm {
      * @param m
      * @param n
      * @return
-     * @since royoan 2014-6-13 下午8:25:33
      */
     public int combination(int m, int n) {
         if (m < n)
@@ -79,7 +78,6 @@ public class CombineAlgorithm {
      * @param i
      * @param n
      * @param tmp
-     * @since royoan 2014-6-15 上午11:22:24
      */
     private void combine(Object src[], int srcIndex, int i, int n, Object[] tmp) {
         int j;
@@ -109,7 +107,6 @@ public class CombineAlgorithm {
      * 用法实例    
      * @param args
      * @throws Exception
-     * @since royoan 2014-6-15 下午8:21:05
      */
     public static void main(String[] args) throws Exception {
         Integer[] a = new Integer[]{1,2,3,4,5,6};
