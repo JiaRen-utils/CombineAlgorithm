@@ -20,3 +20,5 @@ This is an algorithm to solve the combination of several numbers
   			System.out.println(Arrays.toString(c[i]));
   		}
   	}
+    
+    排列组合算法在日常应用中，经常会用到其他地方去，因此保留一下
